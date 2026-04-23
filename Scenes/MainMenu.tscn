@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=1]
+
+[node name="MainMenu" type="Node2D"]
+
+    # Main Menu Background
+    node name="Background" type="Sprite"
+        texture = preload("res://Images/menu_background.png")
+
+    # Start Button
+    node name="StartButton" type="Button"
+        text = "Start Game"
+        rect_position = Vector2(300, 400)
+        connect("pressed", self, "_on_StartButton_pressed")
+
+    # Exit Button
+    node name="ExitButton" type="Button"
+        text = "Exit"
+        rect_position = Vector2(300, 500)
+        connect("pressed", self, "_on_ExitButton_pressed")
+
+# Function to handle Start Button
+func _on_StartButton_pressed():
+    get_tree().change_scene("res://Scenes/Game.tscn")
+
+# Function to handle Exit Button
+func _on_ExitButton_pressed():
+    get_tree().quit()

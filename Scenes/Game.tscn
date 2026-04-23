@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://path_to_environment.tscn" type="PackedScene" id=1]
+[ext_resource path="res://path_to_player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://path_to_enemy.tscn" type="PackedScene" id=3]
+
+[node name="Main" type="Node" version="2.1"]
+
+[sub_resource type="DirectionalLight" id=1]
+    light_color = Color(1, 1, 1)
+    energy = 1
+
+[node name="Environment" type="PackedScene"] 
+    instance = ExtResource( 1 )
+
+[node name="Player" type="PackedScene"]
+    instance = ExtResource( 2 )
+    position = Vector3(0, 1, 0)
+
+[node name="Enemy" type="PackedScene"]
+    instance = ExtResource( 3 )
+    position = Vector3(5, 1, 0)
+
+[node name="Lighting" type="DirectionalLight"]
+    light = SubResource( 1 )

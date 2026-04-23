@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Admin.gdns" type="GdnScript" id=1]
+
+[node name="Admin" type="Spatial"]
+extends Spatial
+
+func _ready():
+    pass
+
+# Here you can add code for the admin scene 

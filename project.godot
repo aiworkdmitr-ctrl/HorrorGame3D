@@ -1,0 +1,4 @@
+[project]
+name="HorrorGame3D"
+version="0.1"
+native_usageselect=0

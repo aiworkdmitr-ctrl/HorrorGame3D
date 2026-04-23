@@ -1,0 +1,11 @@
+# Godot specific files
+.import/
+
+# Build results
+bin/
+
+# Godot user-specific files
+user://
+
+# Temporary folders
+.temp/
